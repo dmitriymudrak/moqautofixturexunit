@@ -9,7 +9,7 @@ namespace Sharie.Services
 {
     public interface ITestingService
     {
-        public TestingModel CalculateSomethingRandom(int a, int b);
+        public Task<TestingModel> CalculateSomethingRandom(int a, int b);
     }
 
     public class TestingService : ITestingService
@@ -22,9 +22,13 @@ namespace Sharie.Services
             RandomService = randomService;
         }
 
-        public TestingModel CalculateSomethingRandom(int a, int b)
+        public async Task<TestingModel> CalculateSomethingRandom(int a, int b)
         {
             var value = RandomService.GenerateRandomValue(1, 1000);
+
+            var imitSleep = await Sleepy.SleepForATime();
+
+            if (!imitSleep) throw new Exception();
 
             if (value<250 && value > 0)
             {
