@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sharie.Services.ExternalService;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -12,8 +13,15 @@ namespace Sharie.Services
 
     public class TestingService : ITestingService
     {
+        private IExternalSleepyService Sleepy { get; }
+        public TestingService(IExternalSleepyService sleepy)
+        {
+            Sleepy = sleepy;
+        }
+
         public TestingModel CalculateSomethingRandom(int a, int b)
         {
+          
             int result;
 
             var rand = new Random();
