@@ -3,10 +3,10 @@ using Xunit;
 
 namespace XUnitTestProject
 {
-    public class UnitTest1
+    public class SUT_TestingService
     {
         [Fact]
-        public void Test1()
+        public void TestingService_if_random_value_morethan_1000()
         {
 
         }

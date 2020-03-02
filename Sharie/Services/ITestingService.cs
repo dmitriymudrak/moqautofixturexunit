@@ -1,4 +1,5 @@
 ﻿using Sharie.Services.ExternalService;
+using Sharie.Services.RandomService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,20 +15,18 @@ namespace Sharie.Services
     public class TestingService : ITestingService
     {
         private IExternalSleepyService Sleepy { get; }
-        public TestingService(IExternalSleepyService sleepy)
+        private IRandomService RandomService { get; }
+        public TestingService(IExternalSleepyService sleepy, IRandomService randomService)
         {
             Sleepy = sleepy;
+            RandomService = randomService;
         }
 
         public TestingModel CalculateSomethingRandom(int a, int b)
         {
-          
-            int result;
+            var value = RandomService.GenerateRandomValue(1, 1000);
 
-            var rand = new Random();
-            var value = rand.Next(0, 1000);
-            
-            if(value<250 && value > 0)
+            if (value<250 && value > 0)
             {
                 return new TestingModel()
                 {

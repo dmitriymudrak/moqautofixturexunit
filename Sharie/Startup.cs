@@ -8,6 +8,9 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Sharie.Services;
+using Sharie.Services.ExternalService;
+using Sharie.Services.RandomService;
 
 namespace Sharie
 {
@@ -24,6 +27,9 @@ namespace Sharie
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddTransient<IRandomService, RandomService>();
+            services.AddTransient<IExternalSleepyService, ExternalSleepyService>();
+            services.AddTransient<ITestingService, TestingService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
