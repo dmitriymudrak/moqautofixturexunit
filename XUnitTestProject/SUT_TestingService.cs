@@ -16,16 +16,24 @@ namespace XUnitTestProject
             ///act
             var mockedRandomService = new Mock<IRandomService>();
             mockedRandomService.Setup(x => x.GenerateRandomValue(2000, 2000)).Returns(2000);
-            var mockedExternalService = new Mock<IExternalSleepyService>();
-            mockedExternalService.Setup(x => x.SleepForATime()).Returns(Task.FromResult(true));
 
-            var mockedTestingService = new Mock<ITestingService>(mockedRandomService, mockedExternalService);
-            mockedTestingService.Setup(x => x.CalculateSomethingRandom(1, 1)).Throws(new Exception());
+            var result = mockedRandomService.Object.GenerateRandomValue(2000, 2000);
 
-            //var result = 
-            ////arrange
+            mockedRandomService.Verify(x => x.GenerateRandomValue(2000, 2000), Times.Once);
 
+            
 
+            Assert.Equal(2000, result);
+
+            //var mockedExternalService = new Mock<IExternalSleepyService>();
+            //mockedExternalService.Setup(x => x.SleepForATime()).Returns(Task.FromResult(true));
+
+            //var mockedTestingService = new TestingService(mockedExternalService.Object, mockedRandomService.Object);
+            //var result = mockedTestingService.CalculateSomethingRandom(2, 3).Result;
+
+            //Exception ex = Assert.ThrowsAsync<Exception>(() => mockedTestingService.CalculateSomethingRandom(2, 2)).Result;
+
+            //Assert.Equal("Out of range", ex.Message);
 
         }
     }

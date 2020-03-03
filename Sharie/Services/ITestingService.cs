@@ -70,7 +70,7 @@ namespace Sharie.Services
                 };
             }
 
-            throw new Exception();
+            throw new Exception("Out of range");
         }
     }
 }
