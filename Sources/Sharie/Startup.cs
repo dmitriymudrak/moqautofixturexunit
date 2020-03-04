@@ -3,9 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Sharie.Interfaces;
-using Sharie.Services;
-using Sharie.Services.RandomService;
+using Sharie.Logic.Interfaces.Services;
 
 namespace Sharie
 {

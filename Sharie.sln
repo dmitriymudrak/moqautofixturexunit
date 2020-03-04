@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sharie", "Sources\Sharie\Sharie.csproj", "{33C1D355-3330-49AC-B1EA-06F242C6526E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sharie.Models", "Sources\Sharie.Models\Sharie.Models.csproj", "{4967938D-B66A-4260-A1D9-00D47C6CCF02}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sharie.Logic.Interfaces", "Sources\Sharie.Logic.Interfaces\Sharie.Logic.Interfaces.csproj", "{AE5BD0CD-AD48-4033-BF36-6F88CAA47F9D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sharie.Logic", "Sources\Sharie.Logic\Sharie.Logic.csproj", "{34CD5EA4-15A3-49F0-B96F-78D11AAD1390}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sharie.Tests", "Sources\Sharie.Tests\Sharie.Tests.csproj", "{5CD21796-FBD8-4E2F-8676-79257E63EA24}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{33C1D355-3330-49AC-B1EA-06F242C6526E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33C1D355-3330-49AC-B1EA-06F242C6526E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33C1D355-3330-49AC-B1EA-06F242C6526E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33C1D355-3330-49AC-B1EA-06F242C6526E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4967938D-B66A-4260-A1D9-00D47C6CCF02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4967938D-B66A-4260-A1D9-00D47C6CCF02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4967938D-B66A-4260-A1D9-00D47C6CCF02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4967938D-B66A-4260-A1D9-00D47C6CCF02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE5BD0CD-AD48-4033-BF36-6F88CAA47F9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE5BD0CD-AD48-4033-BF36-6F88CAA47F9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE5BD0CD-AD48-4033-BF36-6F88CAA47F9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE5BD0CD-AD48-4033-BF36-6F88CAA47F9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34CD5EA4-15A3-49F0-B96F-78D11AAD1390}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34CD5EA4-15A3-49F0-B96F-78D11AAD1390}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34CD5EA4-15A3-49F0-B96F-78D11AAD1390}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34CD5EA4-15A3-49F0-B96F-78D11AAD1390}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CD21796-FBD8-4E2F-8676-79257E63EA24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CD21796-FBD8-4E2F-8676-79257E63EA24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CD21796-FBD8-4E2F-8676-79257E63EA24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CD21796-FBD8-4E2F-8676-79257E63EA24}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BF876D34-106B-4319-8737-C5ECEC38805E}
+	EndGlobalSection
+EndGlobal

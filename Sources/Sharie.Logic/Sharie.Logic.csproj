@@ -5,7 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Sharie.Models\Sharie.Models\Sharie.Models.csproj" />
+    <ProjectReference Include="..\Sharie.Logic.Interfaces\Sharie.Logic.Interfaces.csproj" />
+    <ProjectReference Include="..\Sharie.Models\Sharie.Models.csproj" />
   </ItemGroup>
 
 </Project>
