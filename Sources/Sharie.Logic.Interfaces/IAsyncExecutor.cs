@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 namespace Sharie.Logic.Interfaces
 {
     public interface IAsyncExecutor
     {
-        Task<T> Create<T>(T model);
+        Task<T> FromResult<T>(T model);
+        Task Delay(int milliseconds);
     }
 }

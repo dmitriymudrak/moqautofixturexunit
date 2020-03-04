@@ -7,12 +7,13 @@ namespace Sharie.Logic.Services
 {
     public class TestingService : ITestingService
     {
-        public TestingService(IExternalSleepyService sleepy, IRandomService randomService, IFactoryTestingModel factoryTestingModel, IFactoryException factoryException)
+        public TestingService(IExternalSleepyService sleepy, IRandomService randomService, IFactoryTestingModel factoryTestingModel, IFactoryException factoryException, IAsyncExecutor asyncExecutor)
         {
             Sleepy = sleepy;
             RandomService = randomService;
             FactoryTestingModel = factoryTestingModel;
             FactoryException = factoryException;
+            AsyncExecutor = asyncExecutor;
         }
 
         public async Task<TestingModel> CalculateSomethingRandom(int a, int b)
@@ -28,7 +29,7 @@ namespace Sharie.Logic.Services
             if (value < 750 && value >= 500) result = FactoryTestingModel.Create("Plus 10", value, a + b + 10);
             if (value <= 1000 && value >= 750) result = FactoryTestingModel.Create("Plus 20", value, a + b + 20);
             else FactoryException.Create("Out of range");
-            return await AsyncExecutor.Create(result);
+            return await AsyncExecutor.FromResult(result);
         }
 
         IExternalSleepyService Sleepy { get; }
