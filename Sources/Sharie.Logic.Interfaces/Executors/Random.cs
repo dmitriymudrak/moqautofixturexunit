@@ -1,4 +1,4 @@
-﻿namespace Sharie.Logic.Interfaces
+﻿namespace Sharie.Logic.Interfaces.Executors
 {
     public interface IRandomExecutor
     {

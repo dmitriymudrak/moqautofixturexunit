@@ -1,20 +1,19 @@
 ﻿using System;
 using Sharie.Logic.Interfaces;
+using Sharie.Logic.Interfaces.Executors;
 
-namespace Sharie.Logic
+namespace Sharie.Logic.Executors
 {
     public class RandomExecutor: IRandomExecutor
     {
-        public RandomExecutor()
+        public RandomExecutor(IFactoryRandom factory)
         {
-            var seed = Factory.GenerateSeed();
-            Random = Factory.Create(seed);
+            var seed = factory.GenerateSeed();
+            Random = factory.Create(seed);
         }
 
         public int Next(int min, int max) => Random.Next(min, max);
 
         Random Random { get; }
-
-        IFactoryRandom Factory { get; }
     }
 }
