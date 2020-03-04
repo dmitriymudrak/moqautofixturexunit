@@ -1,7 +1,7 @@
 ﻿using System;
 using Sharie.Logic.Interfaces;
 
-namespace Sharie.Logic
+namespace Sharie.Logic.Factories
 {
     public class FactoryException:IFactoryException
     {

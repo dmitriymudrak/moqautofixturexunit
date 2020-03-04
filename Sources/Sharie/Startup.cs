@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Sharie.Logic;
+using Sharie.Logic.Factories;
 using Sharie.Logic.Interfaces;
 using Sharie.Logic.Interfaces.Services;
 using Sharie.Logic.Services;
@@ -23,14 +24,15 @@ namespace Sharie
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            
+
+            services.AddTransient<IFactoryRandom, FactoryRandom>();
             services.AddTransient<IRandomExecutor, RandomExecutor>();
             services.AddTransient<IFactoryTestingModel, FactoryTestingModel>();
             services.AddTransient<IFactoryException, FactoryException>();
             services.AddTransient<IAsyncExecutor, AsyncExecutor>();
 
             services.AddTransient<IRandomService, RandomService>();
-            services.AddTransient<ExternalSleepyService, ExternalSleepyService>();
+            services.AddTransient<IExternalSleepyService, ExternalSleepyService>();
             services.AddTransient<ITestingService, TestingService>();
         }
 

@@ -1,10 +1,9 @@
-﻿using System;
-using Sharie.Logic;
+﻿using Sharie.Logic.Factories;
 using Sharie.Models;
 using Tests.AAAPattern.xUnit.Attributes;
 using Xunit;
 
-namespace Sharie.Tests.Logic
+namespace Sharie.Tests.Logic.Factories
 {
     public class FactoryTestingModelTests
     {

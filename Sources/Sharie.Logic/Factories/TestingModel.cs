@@ -1,7 +1,7 @@
 ﻿using Sharie.Logic.Interfaces;
 using Sharie.Models;
 
-namespace Sharie.Logic
+namespace Sharie.Logic.Factories
 {
     public class FactoryTestingModel:IFactoryTestingModel
     {
