@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Sharie.Logic.Interfaces\Sharie.Logic.Interfaces\Sharie.Logic.Interfaces.csproj" />
+    <ProjectReference Include="..\..\Sharie.Models\Sharie.Models\Sharie.Models.csproj" />
+  </ItemGroup>
+
+</Project>

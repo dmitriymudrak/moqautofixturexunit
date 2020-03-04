@@ -1,5 +1,3 @@
-using System;
-
 namespace Sharie.Models
 {
     public class ErrorViewModel
