@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>f9323f63-d253-4e8b-a302-41de82b409e9</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>.</DockerfileContext>
+    <Platforms>AnyCPU</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.9.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sharie.Logic.Interfaces\Sharie.Logic.Interfaces.csproj" />
+    <ProjectReference Include="..\Sharie.Logic\Sharie.Logic.csproj" />
+    <ProjectReference Include="..\Sharie.Models\Sharie.Models.csproj" />
+  </ItemGroup>
+
+
+
+</Project>
