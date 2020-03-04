@@ -5,6 +5,7 @@
     <UserSecretsId>f9323f63-d253-4e8b-a302-41de82b409e9</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>.</DockerfileContext>
+    <Platforms>AnyCPU</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
