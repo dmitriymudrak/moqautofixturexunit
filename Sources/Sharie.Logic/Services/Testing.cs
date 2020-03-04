@@ -26,9 +26,9 @@ namespace Sharie.Logic.Services
 
             var result = FactoryTestingModel.Empty();
             if (value < 250 && value > 0) result = FactoryTestingModel.Create("Plus", value, a + b);
-            if (value <= 500 && value > 250) result = FactoryTestingModel.Create("Minus 10", value, a + b - 10);
-            if (value < 750 && value >= 500) result = FactoryTestingModel.Create("Plus 10", value, a + b + 10);
-            if (value <= 1000 && value >= 750) result = FactoryTestingModel.Create("Plus 20", value, a + b + 20);
+            else if (value < 500 && value >= 250) result = FactoryTestingModel.Create("Minus 10", value, a + b - 10);
+            else if (value < 750 && value >= 500) result = FactoryTestingModel.Create("Plus 10", value, a + b + 10);
+            else if (value <= 1000 && value >= 750) result = FactoryTestingModel.Create("Plus 20", value, a + b + 20);
             else FactoryException.Create("Out of range");
             return await AsyncExecutor.FromResult(result);
         }
