@@ -14,7 +14,7 @@ namespace Sharie.Services.RandomService
     {
         public int GenerateRandomValue(int min, int max)
         {
-            throw new NotImplementedException();
+            return new Random().Next(min-500, max-500);
         }
     }
 }
